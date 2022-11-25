@@ -24,7 +24,7 @@ def restart_all_dynos():
 	return r.status_code
 
 schedule.every(20).minutes.do(restart_all_dynos)
-  
+print("SCRIPT STARTED SUCCESSFULY")
 while True:
     schedule.run_pending()
     time.sleep(1)
