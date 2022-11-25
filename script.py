@@ -22,6 +22,8 @@ def restart_all_dynos():
 	r = requests.delete(url = URL, headers=HEADERS)
 	print(r.status_code)
 	return r.status_code
+	
+restart_all_dynos()
 
 schedule.every(20).minutes.do(restart_all_dynos)
 print("SCRIPT STARTED SUCCESSFULY")
